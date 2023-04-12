@@ -1,8 +1,13 @@
 const Note = require("./note");
 const User = require("./user");
 
-Note.sync();
-User.sync();
+//define that there is a one-to-many
+//relationship connection between the users and notes entries
+User.hasMany(Note);
+Note.belongsTo(User);
+//tables in the database match changes made to the model definitions
+Note.sync({ alter: true });
+User.sync({ alter: true });
 
 module.exports = {
   Note,
