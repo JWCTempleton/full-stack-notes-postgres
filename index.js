@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 
-const { PORT } = require("./util/config");
-const { connectToDatabase } = require("./util/db");
+const { PORT } = require("./utils/config");
+const { connectToDatabase } = require("./utils/db");
 
 const notesRouter = require("./controllers/notes");
 
