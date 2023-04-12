@@ -12,12 +12,14 @@ router.post("/", async (req, res) => {
   const { username, name, password } = req.body;
 
   const saltRounds = 10;
-  const passwordHash = await bcrypt.hash(password, saltRounds);
+  const passwordHash = await (
+    await bcrypt.hash(password, saltRounds)
+  ).toString();
 
   const user = new User({
-    username,
-    name,
-    passwordHash,
+    username: username,
+    name: name,
+    password: passwordHash,
   });
   try {
     const savedUser = await user.save();
