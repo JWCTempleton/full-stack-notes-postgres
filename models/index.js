@@ -6,8 +6,9 @@ const User = require("./user");
 User.hasMany(Note);
 Note.belongsTo(User);
 //tables in the database match changes made to the model definitions
-Note.sync({ alter: true });
-User.sync({ alter: true });
+//Note: This is no longer required, done w/ sequlize migration file
+// Note.sync({ alter: true });
+// User.sync({ alter: true });
 
 module.exports = {
   Note,
