@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const jwt = require("jsonwebtoken");
 const { Op } = require("sequelize");
 const { Note, User } = require("../models");
 const { SECRET } = require("../utils/config");
@@ -38,7 +39,7 @@ router.get("/", async (req, res) => {
     attributes: { exclude: ["userId"] },
     include: {
       model: User,
-      attributes: ["name"],
+      attributes: ["name", "username"],
     },
     where,
   });
