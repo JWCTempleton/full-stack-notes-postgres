@@ -3,6 +3,6 @@ Content-Type: application/json
 
 
 {
-    "username":"JWCT",
+    "username":"BannedUser",
     "password":"hello"
 }

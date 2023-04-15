@@ -1,8 +1,8 @@
 POST http://localhost:3001/api/notes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpXQ1QiLCJpZCI6MiwiaWF0IjoxNjgxNTIzMDkzLCJleHAiOjE2ODE1MjY2OTN9.NIZVwwXjq9zLSpXbay6MmzdIRFMhPsKsqP7h2nzhBp8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpXQ1QiLCJpZCI6MiwiaWF0IjoxNjgxNTk5ODEzLCJleHAiOjE2ODE2MDM0MTN9.nEychL4SBLoP5Tmh2rB5W2Ji1kOACaTBcvqrT4d1PDA
 
 {
-    "content":"Auth is working",
-    "important":"true",
+    "content": "Auth is still working",
+    "important": "true"
 }
